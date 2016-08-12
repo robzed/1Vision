@@ -1,0 +1,55 @@
+/*
+ *  stored_parameters.def
+ *  robot_core
+ *
+ *  Created by Rob Probin on 5th April 2010.
+ *  Copyright (C) 2010 Rob Probin.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ */
+
+//
+// This file defines parameters stored in non-volatile memory (currently
+// EEPROM). Adding parameters will cause a default to occur.
+// 
+// This file is included multiple times, so no header file guards.
+// 
+// type is not yet implemented
+// might consider a field to avoid having a setter (e.g. for map parameters)
+
+//         name,                               type,        default
+//         ----------------------------------  ------------  -----
+def_param( map_size_x,                         unsigned int, 16   )
+def_param( map_size_y,                         unsigned int, 16   )
+def_param( map_target_x,                       unsigned int, 7    )
+def_param( map_target_y,                       unsigned int, 7    )
+def_param( map_target_size_x,                  unsigned int, 2    )
+def_param( map_target_size_y,                  unsigned int, 2    )
+
+def_param( camera_angle_in_tenths_of_a_degree, unsigned int, 285  ) // was 230, was 205, 20.5 degrees
+def_param( x_offset_in_pixels,                 unsigned int, 196  ) // pixels
+def_param( red_level,                          unsigned int, 50   ) // was 40
+def_param( is_blue_compare_on,                 bool,         0    )
+
+
+// If you change the order, or add to this structure, change this version number.
+// That will cause a default.
+#define EEPROM_FORMAT_VERSION_NUMBER 4
+
+//
+// this line avoids us having to do it everytime we include this file
+//
+#undef def_param
