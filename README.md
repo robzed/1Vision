@@ -40,8 +40,7 @@ http://www.micromouseonline.com/files/minos09/minos09-rob-probin.pdf
 RAM constraints (60K on each board) coupled with no direct camera interface drove some of the vision design.
 
 Presentation which gives an overview of the principle of operation of the vision system, can be located here:
-http://www.micromouseonline.com/wp/wp-content/uploads/files/minos10/minos10-probin-debugging.pdf
-
+http://www.micromouseonline.com/files/minos08/Rob%20probin/vision-based%20mouse%20introduction.pdf
 
 ## License
 
